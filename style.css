@@ -196,7 +196,7 @@ body.dark a {
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     object-fit: cover;
 }
 
@@ -280,6 +280,7 @@ main {
 
 .title {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .desc {
@@ -478,65 +479,138 @@ main {
     background-color: rgb(0, 140, 255);
 }
 
-
-/* footer {
-    background-color: #6272a4;
-    margin-top: -50px;
-    padding: 20px;
-    text-align: center;
-    color: #ff79c6;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    border-top: 2px solid #dee2e6;
-} */
-
+/* footer style */
 footer {
-    padding: 20px;
-    margin-top: -8px;
     background-color: #6272a4;
-    text-align: center;
-    border-top: 2px solid #dee2e6;
-}
-
-footer h3, footer h4 {
-    margin: 0;
-    font-size: 1.5rem;
     color: #fff;
+    font-size: 16px;
+    margin-top: -10px;
+    text-align: center;
+    padding: 0;
+    /* Pastikan padding dihapus */
+    overflow: hidden;
+    /* Mengatasi masalah overflow yang mungkin muncul */
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+footer * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
 }
 
-.social-links a {
-    text-decoration: none;
-    color: #ff79c6;
-    margin: 0 15px;
+.row-footer {
+    padding: 1em 1em;
+}
+
+.row-footer.primary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Sesuaikan lebar kolom */
+    justify-items: center;
+    /* Memusatkan setiap kolom */
+    align-items: center;
+    /* Memusatkan isi kolom secara vertikal */
+}
+
+.column-footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
     align-items: center;
+    /* Memusatkan isi kolom */
 }
 
-.social-links svg {
-    margin-bottom: 5px;
-    transition: transform 0.2s;
+.links h3 {
+    width: 100%;
+    text-align: center;
+    /* Memusatkan judul link */
+    color: white;
+    font-size: 1.4em;
+    white-space: nowrap;
 }
 
-.social-links a:hover svg {
-    transform: scale(1.1);
-}
-
-.creator-info {
-    margin-top: 40px;
-}
-
-.creator-info p {
+.links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
     margin: 0;
-    font-size: 1rem;
-    color: #333;
+    align-items: center;
+    /* Memusatkan link di kolom */
 }
+
+.links li:not(:first-child) {
+    margin-top: 0.8em;
+}
+
+.links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.links ul li a:hover {
+    color: black;
+}
+
+.about p {
+    text-align: center;
+    /* Tetap rata kiri */
+    width: 80%;
+    /* Sesuaikan lebar paragraf agar tidak melebar ke seluruh footer */
+    margin: 0 auto;
+    /* Memusatkan paragraf secara horizontal dalam kolom */
+    line-height: 2;
+}
+
+div.social {
+    display: flex;
+    justify-content: center;
+    /* Memusatkan ikon */
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+
+.social a {
+    text-decoration: none;
+    /* Hilangkan dekorasi link */
+    margin: 0 0.3em;
+    color: #ffffff;
+    /* Memberikan jarak antar link (ikon) */
+}
+
+.social a i {
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Menambahkan transisi untuk animasi */
+}
+
+.social a i:hover {
+    transform: scale(1.2);
+    /* Efek zoom in saat di-hover */
+    color: #ffcc00 !important;
+    /* Warna berubah saat di-hover */
+}
+
+.copyright {
+    padding: 0.3em 1em;
+    margin: 0;
+    /* Menghilangkan margin yang menyebabkan garis putih */
+    border: none;
+    /* Pastikan tidak ada border */
+}
+
+.copyright p {
+    font-size: 0.9em;
+    text-align: center;
+    /* Memusatkan teks copyright */
+    margin: 0;
+    /* Menghilangkan margin bawah */
+}
+
+/* end footer style */
 
 /* Media Query untuk tampilan di smartphone */
 @media (max-width: 768px) {
@@ -694,23 +768,8 @@ footer h3, footer h4 {
         margin-bottom: 20px;
     }
 
-    footer{
-        margin-top: -8px;
+    .row-footer.primary {
+        grid-template-columns: 1fr;
     }
 
-    footer h3, footer h4 {
-        font-size: 1.2rem;
-    }
-
-    .social-links {
-        flex-wrap: wrap;
-    }
-
-    .social-links a {
-        margin: 10px;
-    }
-
-    .creator-info p {
-        font-size: 0.9rem;
-    }
 }
