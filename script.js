@@ -1,6 +1,24 @@
-const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
-    document.body.classList.toggle("dark")
+// Mendapatkan elemen checkbox
+const checkbox = document.getElementById('checkbox');
+
+// Cek preferensi pengguna dari localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    checkbox.checked = true;
+} else {
+    document.body.classList.remove('dark');
+    checkbox.checked = false;
+}
+
+// Event listener untuk toggle mode
+checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+    }
 });
 
 var swiper = new Swiper(".mySwiper", {

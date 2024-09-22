@@ -116,12 +116,42 @@ body.dark nav {
     background-color: #44475a;
 }
 
-/* #9b59b6 */
+body.dark .row .column article,
+body.dark .row .column article {
+    color: #fff !important;
+}
 
-body.dark h1,
-body.dark a {
+body.dark .desc {
+    background-color: #44475a;
     color: #fff;
 }
+
+body.dark #gallery-photo h1 {
+    color: #fff;
+}
+
+body.dark footer {
+    background-color: #44475a;
+}
+
+/* Light Mode (default): tampilkan SVG pertama */
+.svg-container svg:nth-child(1) {
+    display: block;
+}
+
+.svg-container svg:nth-child(2) {
+    display: none;
+}
+
+/* Dark Mode: tampilkan SVG kedua */
+body.dark .svg-container svg:nth-child(1) {
+    display: none;
+}
+
+body.dark .svg-container svg:nth-child(2) {
+    display: block;
+}
+
 
 .checkbox {
     opacity: 0;
@@ -303,7 +333,7 @@ main {
 
 .frame {
     background-color: #ddc;
-    border: solid 6vmin #eee;
+    border: solid 5vmin #eee;
     border-bottom-color: #fff;
     border-left-color: #eee;
     border-radius: 2px;
@@ -648,20 +678,6 @@ div.social {
         font-size: 1.5em;
     }
 
-    /* Dark Mode */
-    body.dark {
-        background-color: #292c35;
-    }
-
-    body.dark nav {
-        background-color: #44475a;
-    }
-
-    body.dark h1,
-    body.dark a {
-        color: #fff;
-    }
-
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -698,6 +714,7 @@ div.social {
         top: 20px;
         right: 20px;
         cursor: pointer;
+        color: #fff;
     }
 
     /* Saat navbar dalam mode responsif */
