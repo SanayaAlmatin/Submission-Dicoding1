@@ -424,7 +424,6 @@ main {
     font-size: 18px;
     z-index: 10;
     display: none;
-    /* Disembunyikan secara default */
 }
 
 /* Posisi tombol di layar kecil */
@@ -438,22 +437,15 @@ main {
 
 .frosted-glass {
     background: rgba(255, 255, 255, 0.2);
-    /* Slightly transparent white background */
     border-radius: 15px;
-    /* Rounded corners for a glass effect */
     padding: 20px 40px;
     backdrop-filter: blur(10px);
-    /* Blur effect for frosted glass */
     -webkit-backdrop-filter: blur(10px);
-    /* For better support on Safari */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     border: 1px solid rgba(255, 255, 255, 0.3);
-    /* Border that mimics glass */
     text-align: center;
     color: white;
     margin-top: 20px;
-    /* Text color that contrasts with the background */
 }
 
 
@@ -643,20 +635,83 @@ div.social {
 /* end footer style */
 
 /* Media Query untuk tampilan di smartphone */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .navbar {
         flex-direction: column;
+        position: relative;
+        /* Agar menu tetap dalam flow layout */
+        overflow: visible;
+        /* Biarkan menu terlihat di layar kecil */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     .nav-menu {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        text-align: left;
+        align-items: flex-start;
+        position: absolute;
+        top: 50px;
+        padding-left: 20px;
+    }
+
+    .navbar.responsive .nav-menu {
+        display: flex;
+        background-color: #6272a4;
+    }
+
+    body.dark .navbar.responsive .nav-menu {
+        background-color: #44475a;
+    }
+
+    .nav-menu li {
+        padding: 15px;
+        width: 95%;
+        border-bottom: 1px solid #fff;
+    }
+
+    .nav-menu li a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+        /* Ini memastikan ikon dan teks berada dalam satu baris */
+        width: 100%;
+        padding: 10px;
     }
 
     .nav-item {
-        margin-right: 0;
-        margin-bottom: 10px;
+        display: flex;
+        /* Mengatur flex untuk memastikan ikon dan teks sejajar */
+        align-items: left;
+        /* Menyelaraskan elemen ikon dan teks secara vertikal */
+        position: relative;
+        margin-bottom: 20px;
+        /* Memberikan jarak antar item menu */
+        padding-bottom: 10px;/
+    }
+
+    .nav-item a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 0;
+    }
+
+    .nav-text {
+        color: white;
+        font-weight: bold;
+        opacity: 1;
+        white-space: nowrap;
+        pointer-events: none;
+        visibility: visible;
+        left: 100px;
+        top: 10px;
     }
 
     .column {
@@ -678,29 +733,6 @@ div.social {
         font-size: 1.5em;
     }
 
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: #fff;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-
-    .nav-menu li {
-        padding: 15px;
-        border-bottom: 1px solid #fff;
-        /* Separator antara menu */
-    }
-
-    .nav-menu li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-    }
-
     .icon {
         position: absolute;
         left: 20px;
@@ -710,17 +742,25 @@ div.social {
     /* Tampilkan hamburger icon di layar kecil */
     .hamburger-icon {
         display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
+        /* Tampilkan icon hamburger */
         cursor: pointer;
-        color: #fff;
+        position: absolute;
+        top: 15px;
+        /* Berada di bagian atas navbar */
+        right: 20px;
+        /* Tetap di pojok kanan */
+        font-size: 24px;
+    }
+
+    .hamburger-icon .fa-bars {
+        color: white;
+        font-size: 22px;
     }
 
     /* Saat navbar dalam mode responsif */
-    .navbar.responsive .nav-menu {
+    /* .navbar.responsive .nav-menu {
         display: flex;
-    }
+    } */
 
     .swiper-slide img {
         display: block;

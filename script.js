@@ -46,10 +46,11 @@ var swiperCards = new Swiper('.mySwiperCards', {
 
 function toggleMenu() {
     var x = document.querySelector(".navbar");
+    console.log(x); // Memeriksa apakah elemen benar
     if (x.classList.contains("responsive")) {
-        x.classList.remove("responsive"); // Hapus kelas 'responsive' jika sudah ada
+        x.classList.remove("responsive");
     } else {
-        x.classList.add("responsive"); // Tambahkan kelas 'responsive' jika belum ada
+        x.classList.add("responsive");
     }
 }
 
