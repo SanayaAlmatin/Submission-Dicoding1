@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dear Tomat</title>
+    <link rel="shortcut icon" href="assets/tabler--paw-filled.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body id="home">
@@ -79,7 +81,7 @@
                         <h1>Tomat</h1>
                         <p>Yaitu Kenangan Mengenai Kucingku Tomat</p>
                     </div>
-                </div>
+                </div>1
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -87,7 +89,7 @@
     <main>
         <section>
             <div class="row">
-                <div class="column">
+                <div class="column" data-aos="fade-up-right" data-aos-duration="1300">
                     <article>
                         <h1>Perkenalan</h1>
                         <p>Hai! Selamat datang di website ini. Sebelum lebih jauh lebih baik kita kenalan dulu dengan
@@ -101,9 +103,9 @@
                         </p>
                     </article>
                 </div>
-                <div class="column">
+                <div class="column" data-aos="fade-up-left" data-aos-duration="1300">
                     <div class="frame">
-                        <img src="assets/tomat2.png" alt="">
+                        <img src="assets/foto_bingkai.png" alt="">
                     </div>
                 </div>
             </div>
@@ -113,16 +115,16 @@
                 <button class="custom-prev" onclick="moveCustomSlide(-1)">&#10094;</button>
                 <div class="custom-slides-wrapper">
                     <div class="custom-slide column frosted-glass">
-                        <aside class="profile-card">
+                        <aside class="profile-card" data-aos="zoom-in-up" data-aos-duration="1300">
                             <div class="profile-image">
-                                <img src="assets/img_slide2.jpg" alt="Profile Picture">
+                                <img src="assets/profile_tomat.jpg" alt="Profile Picture">
                             </div>
                             <blockquote class="profile-quote">
                                 "Meow meow meow meow meow..."
                             </blockquote>
                         </aside>
                     </div>
-                    <div class="custom-slide column">
+                    <div class="custom-slide column" data-aos="zoom-in-left" data-aos-duration="1300">
                         <article>
                             <h1>Kata Tomat</h1>
                             <p>Meow adalah satu-satunya kata yang sering diucapkan oleh tomat dan paling ku ingat, tapi
@@ -130,7 +132,7 @@
                                 denger <i>meow</i> nya dia. Kenapa aku gabisa denger lagi? Sedikit cerita, Tomat
                                 mengidap penyakit FLU menahun dan divonis tidak bisa sembuh oleh Dokter.
                                 Atas vonis tersebut aku kemudian merawatnya dengan penuh kasih sayang. Balik ke
-                                pertanyaan tadi aku gabisa dengen <i>meow</i> nya lagi karena dia hilang dan
+                                pertanyaan tadi aku gabisa denger <i>meow</i> nya lagi karena dia hilang dan
                                 tidak ditemukan sampai saat ini walaupun telah berusaha mencari dan menyebar selebaran
                                 di sekitar tempat tinggalku.
                             </p>
@@ -143,7 +145,7 @@
         <section class="desc">
             <div class="row">
                 <div class="column-50">
-                    <div class="text">
+                    <div class="text" data-aos="zoom-in-down" data-aos-duration="1300">
                         <article>
                             <h1>Kenapa Web Ini Dibuat?</h1>
                             <p>Seperti yang sudah ku ceritakan sebelumnya tentang Tomat kucing kesayanganku, website ini
@@ -162,21 +164,21 @@
                 <h1>Gallery</h1>
             </div>
             <div class="row-foto">
-                <div class="column-foto">
+                <div class="column-foto" data-aos="fade-up-right" data-aos-duration="1300">
                     <div class="swiper mySwiperCards">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide"><img src="assets/foto_tomat_1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/foto_tomat_2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/foto_tomat_3.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
-                <div class="column-foto">
+                <div class="column-foto" data-aos="fade-up-left" data-aos-duration="1300">
                     <div class="swiper mySwiperCards">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="assets/cat-vertical.jpg" alt=""></div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide"><img src="assets/foto_tomat_4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/foto_tomat_5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/foto_tomat_6.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -202,53 +204,46 @@
     <footer>
         <div class="row-footer primary">
             <div class="column-footer about">
-                <h3>Foolish Developer</h3>
+                <h3>Catatan Kaki Pembuat</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-                    voluptatem corporis error non,
+                    Setiap hari aku selalu berharap Tomat kembali pulang, dan harapan itu akan terus ada.
                 </p>
                 <div class="social">
-                    <a href=""><i class="fab fa-github-square"></i></a>
+                    <a href="https://github.com/SanayaAlmatin" target="_blank"><i class="fab fa-github-square"></i></a>
                     <a href=""><i class="fab fa-instagram-square"></i></a>
                     <a href=""><i class="fab fa-facebook-square"></i></a>
                 </div>
             </div>
             <div class="column-footer links">
-                <h3>Some Links</h3>
+                <h3>Identitas Pembuat</h3>
                 <ul>
                     <li>
-                        <a href="#faq">F.A.Q</a>
+                        <a href="#">Muchamad Sanaya Almatin</a>
                     </li>
                     <li>
-                        <a href="#cookies-policy">Cookies Policy</a>
+                        <a href="#">Sistem Informasi</a>
                     </li>
                     <li>
-                        <a href="#terms-of-services">Terms Of Service</a>
-                    </li>
-                    <li>
-                        <a href="#support">Support</a>
+                        <a href="#">Universitas Amikom Yogyakarta</a>
                     </li>
                 </ul>
             </div>
             <div class="column-footer links">
-                <h3>Some Links</h3>
+                <h3>Identitas SIB</h3>
                 <ul>
                     <li>
-                        <a href="#faq">F.A.Q</a>
+                        <a href="#">ID: F1837YB42</a>
                     </li>
                     <li>
-                        <a href="#cookies-policy">Cookies Policy</a>
+                        <a href="#">Email: F1837YB42@devacademy.id </a>
                     </li>
                     <li>
-                        <a href="#terms-of-services">Terms Of Service</a>
-                    </li>
-                    <li>
-                        <a href="#support">Support</a>
+                        <a href="#">Mitra: PT Dicoding Akademi Indonesia.</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <p>Copyright &copy; 2021 Foolish Developer</p>
+        <p>Dibuat Dengan ❤️ Untuk Tomat</p>
         </div>
     </footer>
 </body>
@@ -257,6 +252,10 @@
 <script src="script.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
     integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 
 </html>

@@ -1,7 +1,6 @@
-// Mendapatkan elemen checkbox
+// Script untuk darkmode/lightmode
 const checkbox = document.getElementById('checkbox');
 
-// Cek preferensi pengguna dari localStorage
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
     checkbox.checked = true;
@@ -10,7 +9,6 @@ if (localStorage.getItem('theme') === 'dark') {
     checkbox.checked = false;
 }
 
-// Event listener untuk toggle mode
 checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
         document.body.classList.add('dark');
@@ -21,11 +19,12 @@ checkbox.addEventListener('change', function () {
     }
 });
 
+//Script untuk slider
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
     },
     pagination: {
@@ -44,9 +43,10 @@ var swiperCards = new Swiper('.mySwiperCards', {
     loop: true,
 });
 
+
+//Script untuk responsive navbar
 function toggleMenu() {
     var x = document.querySelector(".navbar");
-    console.log(x); // Memeriksa apakah elemen benar
     if (x.classList.contains("responsive")) {
         x.classList.remove("responsive");
     } else {
@@ -54,6 +54,7 @@ function toggleMenu() {
     }
 }
 
+//Script untuk custom slider
 let customIndex = 0;
 
 function moveCustomSlide(direction) {
@@ -82,17 +83,12 @@ function resetSliderLayout() {
     const slidesWrapper = document.querySelector('.custom-slides-wrapper');
 
     if (screenWidth > 768) {
-        // Reset layout to two columns on larger screens
         customIndex = 0;
         slidesWrapper.style.transform = `translateX(0)`;
     } else {
-        // Maintain position of slides on small screens
         updateSlidePosition();
     }
 }
 
-// Event listener for screen resizing
 window.addEventListener('resize', resetSliderLayout);
-
-// Call function to set the correct layout when the page first loads
 window.addEventListener('load', resetSliderLayout);

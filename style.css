@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 
-h1 {
+
+h1,
+h2,
+h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 
-p {
-    font-family: 'Monstserrat Alternates';
+p,
+a {
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 500;
 }
 
@@ -23,9 +28,6 @@ html {
 html::-webkit-scrollbar {
     display: none;
 }
-
-
-/* General styling */
 
 body {
     font-family: Arial, sans-serif;
@@ -81,7 +83,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Hidden text */
 .nav-text {
     color: white;
     margin-top: 20px;
@@ -97,7 +98,6 @@ body {
     transform: translateX(-50%);
 }
 
-/* Hover effects */
 .nav-item:hover .nav-text {
     opacity: 1;
     visibility: visible;
@@ -134,7 +134,6 @@ body.dark footer {
     background-color: #44475a;
 }
 
-/* Light Mode (default): tampilkan SVG pertama */
 .svg-container svg:nth-child(1) {
     display: block;
 }
@@ -143,7 +142,6 @@ body.dark footer {
     display: none;
 }
 
-/* Dark Mode: tampilkan SVG kedua */
 body.dark .svg-container svg:nth-child(1) {
     display: none;
 }
@@ -151,7 +149,6 @@ body.dark .svg-container svg:nth-child(1) {
 body.dark .svg-container svg:nth-child(2) {
     display: block;
 }
-
 
 .checkbox {
     opacity: 0;
@@ -249,17 +246,14 @@ main {
     max-width: 80%;
     max-height: 20%;
     padding: 15px;
-    /* Tambahkan padding untuk jarak antar kolom */
     text-align: center;
 }
 
 .column img {
     max-width: 100%;
     height: auto;
-    /* Gambar akan menyesuaikan dengan lebar kolom */
 }
 
-/* Kolom tengah: 50% */
 .column-50 {
     flex: 0 0 100%;
     max-width: 60%;
@@ -281,19 +275,15 @@ main {
     padding: 0;
     display: flex;
     flex-wrap: nowrap;
-    /* Mencegah kolom bergeser ke bawah */
     margin-bottom: 50px;
     margin-left: 20px;
     margin-right: 20px;
     justify-content: space-between;
-    /* Menjaga jarak antar kolom */
 }
 
 .column-foto {
     flex: 1 1 0;
-    /* Membuat kolom bisa menyesuaikan ukuran */
     max-width: 50%;
-    /* Menjaga ukuran kolom maksimal 50% */
     padding: 15px;
     text-align: center;
 }
@@ -301,11 +291,8 @@ main {
 .gallery {
     display: flex;
     justify-content: center;
-    /* Sentralisasi secara horizontal */
     align-items: center;
-    /* Sentralisasi secara vertikal */
     height: 50vh;
-    /* Sesuaikan dengan tinggi kontainer */
 }
 
 .title {
@@ -316,11 +303,8 @@ main {
 .desc {
     background-color: #EEEDEB;
     width: 100%;
-    /* Pastikan lebar section 100% */
     padding: 20px;
-    /* Tambahkan padding untuk jarak antara teks dan tepi section */
     box-sizing: border-box;
-    /* Pastikan padding tidak menambah lebar keseluruhan */
     margin: 0;
 }
 
@@ -371,19 +355,12 @@ main {
 }
 
 .parallax {
-    /* Mengatur ukuran section */
     height: 80vh;
-    /* Set tinggi 100% dari viewport */
-    background-image: url('assets/img_slide3.jpg');
-    /* Ganti dengan URL gambar yang sesuai */
+    background-image: url('assets/parallax_img.jpg');
     background-size: cover;
-    /* Mengatur gambar agar menutupi seluruh area */
     background-position: center;
-    /* Posisikan gambar di tengah */
     background-attachment: fixed;
-    /* Membuat gambar tetap diam saat di-scroll */
     background-repeat: no-repeat;
-    /* Agar gambar tidak berulang */
     color: #fff;
     padding: 50px;
 }
@@ -409,7 +386,6 @@ main {
     padding: 20px;
 }
 
-/* Tombol navigasi */
 .custom-prev,
 .custom-next {
     position: absolute;
@@ -426,7 +402,6 @@ main {
     display: none;
 }
 
-/* Posisi tombol di layar kecil */
 .custom-prev {
     left: 5px;
 }
@@ -460,7 +435,6 @@ main {
     max-width: 90%;
 }
 
-/* Styling Gambar Lingkaran */
 .profile-image img {
     width: 150px;
     height: 150px;
@@ -469,14 +443,12 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling Quote */
 .profile-quote {
     margin-top: 15px;
     font-style: italic;
     font-size: 1.1rem;
     color: #333;
 }
-
 
 .mySwiperCards {
     width: 240px;
@@ -501,7 +473,6 @@ main {
     background-color: rgb(0, 140, 255);
 }
 
-/* footer style */
 footer {
     background-color: #6272a4;
     color: #fff;
@@ -509,13 +480,11 @@ footer {
     margin-top: -10px;
     text-align: center;
     padding: 0;
-    /* Pastikan padding dihapus */
     overflow: hidden;
-    /* Mengatasi masalah overflow yang mungkin muncul */
+    font-family: "Nunito Sans", sans-serif;
 }
 
 footer * {
-    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -528,11 +497,8 @@ footer * {
 .row-footer.primary {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* Sesuaikan lebar kolom */
     justify-items: center;
-    /* Memusatkan setiap kolom */
     align-items: center;
-    /* Memusatkan isi kolom secara vertikal */
 }
 
 .column-footer {
@@ -542,13 +508,11 @@ footer * {
     padding: 0 2em;
     min-height: 15em;
     align-items: center;
-    /* Memusatkan isi kolom */
 }
 
 .links h3 {
     width: 100%;
     text-align: center;
-    /* Memusatkan judul link */
     color: white;
     font-size: 1.4em;
     white-space: nowrap;
@@ -561,7 +525,6 @@ footer * {
     padding: 0;
     margin: 0;
     align-items: center;
-    /* Memusatkan link di kolom */
 }
 
 .links li:not(:first-child) {
@@ -577,20 +540,20 @@ footer * {
     color: black;
 }
 
+body.dark .links ul li a:hover {
+    color: #ff79c6;
+}
+
 .about p {
     text-align: center;
-    /* Tetap rata kiri */
     width: 80%;
-    /* Sesuaikan lebar paragraf agar tidak melebar ke seluruh footer */
     margin: 0 auto;
-    /* Memusatkan paragraf secara horizontal dalam kolom */
     line-height: 2;
 }
 
 div.social {
     display: flex;
     justify-content: center;
-    /* Memusatkan ikon */
     font-size: 2.4em;
     flex-direction: row;
     margin-top: 0.5em;
@@ -598,51 +561,32 @@ div.social {
 
 .social a {
     text-decoration: none;
-    /* Hilangkan dekorasi link */
     margin: 0 0.3em;
     color: #ffffff;
-    /* Memberikan jarak antar link (ikon) */
 }
 
 .social a i {
     transition: transform 0.3s ease, color 0.3s ease;
-    /* Menambahkan transisi untuk animasi */
-}
-
-.social a i:hover {
-    transform: scale(1.2);
-    /* Efek zoom in saat di-hover */
-    color: #ffcc00 !important;
-    /* Warna berubah saat di-hover */
 }
 
 .copyright {
     padding: 0.3em 1em;
     margin: 0;
-    /* Menghilangkan margin yang menyebabkan garis putih */
     border: none;
-    /* Pastikan tidak ada border */
 }
 
 .copyright p {
     font-size: 0.9em;
     text-align: center;
-    /* Memusatkan teks copyright */
     margin: 0;
-    /* Menghilangkan margin bawah */
 }
 
-/* end footer style */
-
-/* Media Query untuk tampilan di smartphone */
 @media screen and (max-width: 768px) {
 
     .navbar {
         flex-direction: column;
         position: relative;
-        /* Agar menu tetap dalam flow layout */
         overflow: visible;
-        /* Biarkan menu terlihat di layar kecil */
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -679,19 +623,15 @@ div.social {
         text-decoration: none;
         display: flex;
         align-items: flex-start;
-        /* Ini memastikan ikon dan teks berada dalam satu baris */
         width: 100%;
         padding: 10px;
     }
 
     .nav-item {
         display: flex;
-        /* Mengatur flex untuk memastikan ikon dan teks sejajar */
         align-items: left;
-        /* Menyelaraskan elemen ikon dan teks secara vertikal */
         position: relative;
         margin-bottom: 20px;
-        /* Memberikan jarak antar item menu */
         padding-bottom: 10px;/
     }
 
@@ -735,16 +675,12 @@ div.social {
         top: 15px;
     }
 
-    /* Tampilkan hamburger icon di layar kecil */
     .hamburger-icon {
         display: block;
-        /* Tampilkan icon hamburger */
         cursor: pointer;
         position: absolute;
         top: 15px;
-        /* Berada di bagian atas navbar */
         right: 20px;
-        /* Tetap di pojok kanan */
         font-size: 24px;
     }
 
@@ -752,11 +688,6 @@ div.social {
         color: white;
         font-size: 22px;
     }
-
-    /* Saat navbar dalam mode responsif */
-    /* .navbar.responsive .nav-menu {
-        display: flex;
-    } */
 
     .swiper-slide img {
         display: block;
@@ -805,14 +736,11 @@ div.social {
 
     .row-foto {
         flex-wrap: nowrap;
-        /* Memastikan tetap dalam baris horizontal */
         overflow-x: auto;
-        /* Menambahkan scrollbar horizontal untuk layar kecil jika perlu */
     }
 
     .column-foto {
         max-width: 50%;
-        /* Tetap menjaga ukuran kolom maksimal 50% */
     }
 
     .mySwiperCards {
